@@ -9,7 +9,9 @@ FlatList; HttpRequests; useEffect
 ### App component
 should use components AllWords and AddWord. 
 - stores added words in the state
-- responsible for displaying active screen (can be AllWords or AddWord)  
+- responsible for displaying active screen (can be AllWords or AddWord) 
+
+*Note: for correct tests passing do not import React into App.js*
   
 ### AllWords component
 <img src="./assets/NoWords.png" width="200">  
