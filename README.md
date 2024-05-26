@@ -16,9 +16,10 @@ should use components AllWords and AddWord.
 <img src="./assets/AllWords.png" width="200">  
 
  - should be shown at the start of an application
- - receives *switchScreen* and *words* props
+ - receives *switchScreen*, *words* and *setWords* props
    - switchScreen is a function that makes AddWord screen active
    - words is a state value - an array of added words
+   - setWords is a state setter for words
  - should use FlatList to display the list of added words
  - if there are no words added, *No words yet* should be on the screen
  - a new word can be added via pressing on "+" pressable element on the screen (Ionicons "add-outline") 
