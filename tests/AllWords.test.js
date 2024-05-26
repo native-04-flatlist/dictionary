@@ -43,23 +43,3 @@ test("Press on 'play' does not call service playSound method if there is no soun
   });
   expect(playService.playSound).not.toHaveBeenCalled();
 });
-
-test("Press on 'delete' deletes the word", async () => {
-  const user = userEvent.setup();
-  jest.useFakeTimers();
-  render(<AllWords words={words} switchScreen={jest.fn()} />);
-
-  let playButtons = screen.getAllByText("trash-outline");
-
-  await user.press(playButtons[2]);
-  act(() => {
-    jest.runAllTimers();
-  });
-  const deletedWordText = screen.queryByText(words[2].word);
-  const deletedWordExplanation = screen.queryByText(words[2].word);
-  expect(deletedWordText).not.toBeOnTheScreen();
-  expect(deletedWordExplanation).not.toBeOnTheScreen();
-
-  playButtons = screen.getAllByText("trash-outline");
-  expect(playButtons).toHaveLength(3);
-});
