@@ -11,7 +11,9 @@ should use components AllWords and AddWord.
 - stores added words in the state
 - responsible for displaying active screen (can be AllWords or AddWord) 
 
-*Note: for correct tests passing do not import React into App.js*
+*Note: for correct tests passing do not import React into App.js*  
+*and import Ionicons like this:*  
+*import Ionicons from "@expo/vector-icons/Ionicons";*  
   
 ### AllWords component
 <img src="./assets/NoWords.png" width="200">  
